@@ -1,140 +1,319 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-vibe="premium">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon - Trulax Remedies ACV</title>
-    <style>
-        /* Basic Reset and Font */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7f6; /* Light, clean background */
-            color: #333;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        
-        /* Main Container */
-        .container {
-            max-width: 600px;
-            width: 90%; /* Responsive width */
-            margin: 20px;
-            padding: 30px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-        }
-
-        /* Logo Styles */
-        .logo {
-            max-width: 250px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        /* Product Image Styles */
-        .product-image {
-            max-width: 200px; /* Adjust as needed */
-            height: auto;
-            margin-bottom: 30px;
-            border-radius: 5px; /* Optional: adds a slight curve to the image corners */
-        }
-
-        /* Text Styles */
-        h1 {
-            font-size: 2.2em;
-            color: #004d40; /* Dark green from the logo's palette */
-            margin-bottom: 15px;
-        }
-        
-        p.description {
-            font-size: 1.1em;
-            line-height: 1.6;
-            color: #555;
-            margin-bottom: 30px;
-        }
-
-        /* Form Styles */
-        .signup-form-container {
-            margin-top: 20px;
-        }
-
-        .signup-form-container p {
-            margin-bottom: 10px;
-            font-weight: 600;
-            color: #004d40;
-        }
-
-        .signup-form {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap; /* Allows wrapping on smaller screens */
-        }
-
-        .signup-form input[type="email"] {
-            padding: 12px;
-            width: 60%;
-            min-width: 200px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-
-        .signup-form button {
-            padding: 12px 24px;
-            background-color: #004d40; /* Dark green */
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
-
-        .signup-form button:hover {
-            background-color: #00695c; /* Slightly lighter green on hover */
-        }
-
-        /* Footer */
-        footer {
-            margin-top: 40px;
-            font-size: 0.85em;
-            color: #888;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TRULAX Remedies</title>
+  <meta name="description" content="TRULAX Remedies — Lorem ipsum dolor sit amet." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="grain" aria-hidden="true"></div>
 
-    <div class="container">
-        <img src="image_1.png" alt="Trulax Remedies Logo" class="logo">
-        
-        <img src="image_0.png" alt="ACV Moringa & Pomegranate Effervescent Tablets" class="product-image">
+  <header class="header" id="top">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="TRULAX Remedies Home">
+        <span class="brand-mark">TRULAX</span>
+        <span class="brand-sub">Remedies</span>
+      </a>
 
-        <h1>Something Fizz-tastic is Coming!</h1>
-        
-        <p class="description">
-            We're excited to announce the launch of our new <strong>ACV Moringa & Pomegranate</strong> effervescent tablets. <br>Sparkling goodness, ready whenever and wherever you are.
-        </p>
-        
-        <div class="signup-form-container">
-            <p>Be the first to know when it arrives:</p>
-            <form class="signup-form" action="#" method="post"> 
-                <input type="email" name="email" placeholder="Enter your email address" required>
-                <button type="submit">Get Notified</button>
-            </form>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" data-nav>
+        <a href="#products">Products</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#story">Our Story</a>
+        <a href="#faq">FAQ</a>
+
+        <div class="vibe" aria-label="Vibe selector">
+          <span class="vibe__label">Vibe</span>
+          <div class="vibe__seg" role="group" aria-label="Theme">
+            <button class="vibe__btn" type="button" data-vibe-btn data-vibe="premium" aria-pressed="true">Premium</button>
+            <button class="vibe__btn" type="button" data-vibe-btn data-vibe="clean" aria-pressed="false">Clean</button>
+            <button class="vibe__btn" type="button" data-vibe-btn data-vibe="earthy" aria-pressed="false">Earthy</button>
+          </div>
         </div>
 
-        <footer>
-            &copy; 2025 Trulax Remedies. All rights reserved.
-        </footer>
-    </div>
+        <a class="btn btn--small" href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
 
+  <main>
+    <section class="hero section" aria-label="Hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Lorem ipsum • dolor sit amet</p>
+          <h1 class="hero__title">
+            Premium wellness, <span class="accent">made simple</span>.
+          </h1>
+          <p class="hero__subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.
+            Sed cursus ante dapibus diam.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn" href="#products">Explore products</a>
+            <a class="btn btn--ghost" href="#benefits">Learn more</a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="pill">Lorem ipsum</div>
+            <div class="pill">Dolor sit</div>
+            <div class="pill">Amet consectetur</div>
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <div class="media-card" data-reveal>
+            <div class="media-card__bg"></div>
+            <img class="media-card__img" src="assets/product-tube.png" alt="TRULAX ACV effervescent tube" loading="eager" />
+          </div>
+          <div class="hero__badge" data-reveal>
+            <div class="hero__badge-inner">
+              <span class="hero__badge-kicker">New</span>
+              <span class="hero__badge-title">Lorem ipsum</span>
+              <span class="hero__badge-sub">Dolor sit amet</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Products</h2>
+          <p class="section__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card" data-reveal data-gallery-trigger role="button" tabindex="0"
+                   aria-label="Open gallery for ACV Effervescent"
+                   data-gallery-title="ACV Effervescent"
+                   data-gallery-images="assets/acv-1.png,assets/acv-2.png,assets/acv-3.png">
+            <div class="card__media">
+              <img src="assets/acv-1.png" alt="ACV Effervescent cover image" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3>ACV Effervescent</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales ligula in libero.</p>
+              <span class="link" aria-hidden="true">View gallery →</span>
+            </div>
+          </article>
+
+          <article class="card" data-reveal data-gallery-trigger role="button" tabindex="0"
+                   aria-label="Open gallery for Better daily routine"
+                   data-gallery-title="Better daily routine"
+                   data-gallery-images="assets/product-benefits.png,assets/acv-1.png,assets/acv-2.png">
+            <div class="card__media card__media--wide">
+              <img src="assets/product-benefits.png" alt="Product in water visual" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3>Better daily routine</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim lacinia nunc.</p>
+              <span class="link" aria-hidden="true">View gallery →</span>
+            </div>
+          </article>
+
+          <article class="card" data-reveal data-gallery-trigger role="button" tabindex="0"
+                   aria-label="Open gallery for Made with care"
+                   data-gallery-title="Made with care"
+                   data-gallery-images="assets/logo.png,assets/acv-1.png,assets/product-benefits.png">
+            <div class="card__media">
+              <img src="assets/logo.png" alt="TRULAX Remedies logo" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <h3>Made with care</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec tellus sed augue semper porta.</p>
+              <span class="link" aria-hidden="true">View gallery →</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="benefits">
+      <div class="container split">
+        <div class="split__copy" data-reveal>
+          <h2 class="section__title">Benefits</h2>
+          <p class="section__subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi. Nulla quis sem at nibh elementum imperdiet.
+          </p>
+
+          <ul class="list">
+            <li>
+              <span class="dot"></span>
+              <div>
+                <h4>Lorem ipsum</h4>
+                <p>Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+              </div>
+            </li>
+            <li>
+              <span class="dot"></span>
+              <div>
+                <h4>Dolor sit amet</h4>
+                <p>Mauris massa. Vestibulum lacinia arcu eget nulla.</p>
+              </div>
+            </li>
+            <li>
+              <span class="dot"></span>
+              <div>
+                <h4>Consectetur</h4>
+                <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="split__media" data-reveal>
+          <div class="image-stack">
+            <img class="image-stack__img" src="assets/product-benefits.png" alt="Benefits visual" loading="lazy" />
+            <div class="image-stack__card">
+              <p class="image-stack__kicker">Lorem ipsum</p>
+              <p class="image-stack__text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit.”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="story">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Our story</h2>
+          <p class="section__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__item" data-reveal>
+            <div class="timeline__dot"></div>
+            <div class="timeline__content">
+              <h3>Lorem ipsum</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+            </div>
+          </div>
+          <div class="timeline__item" data-reveal>
+            <div class="timeline__dot"></div>
+            <div class="timeline__content">
+              <h3>Dolor sit</h3>
+              <p>Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+            </div>
+          </div>
+          <div class="timeline__item" data-reveal>
+            <div class="timeline__dot"></div>
+            <div class="timeline__content">
+              <h3>Amet consectetur</h3>
+              <p>Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="faq">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">FAQ</h2>
+          <p class="section__subtitle">Lorem ipsum dolor sit amet. Replace these with real answers later.</p>
+        </div>
+
+        <div class="accordion" data-accordion>
+          <details class="accordion__item" open>
+            <summary>What is TRULAX Remedies?</summary>
+            <div class="accordion__content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+            </div>
+          </details>
+          <details class="accordion__item">
+            <summary>How do I use the product?</summary>
+            <div class="accordion__content">
+              <p>Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris ipsum. Nulla metus metus, ullamcorper vel.</p>
+            </div>
+          </details>
+          <details class="accordion__item">
+            <summary>Where is it made?</summary>
+            <div class="accordion__content">
+              <p>Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact">
+        <div class="contact__copy" data-reveal>
+          <h2 class="section__title">Contact</h2>
+          <p class="section__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Send us a note.</p>
+          <p class="contact__note">
+            <strong>Email</strong>: <a href="mailto:hello@trulaxremedies.example">hello@trulaxremedies.example</a><br>
+            <strong>Instagram</strong>: <a href="#">@trulaxremedies</a>
+          </p>
+        </div>
+
+        <form class="form" data-reveal onsubmit="return false;">
+          <label>
+            <span>Name</span>
+            <input type="text" placeholder="Lorem Ipsum" autocomplete="name" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" placeholder="lorem@ipsum.com" autocomplete="email" />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea rows="5" placeholder="Lorem ipsum dolor sit amet..."></textarea>
+          </label>
+          <button class="btn" type="submit">Send</button>
+          <p class="form__fineprint">Lorem ipsum dolor sit amet. (This is a placeholder form for GitHub Pages.)</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <div class="footer__brand">TRULAX Remedies</div>
+        <div class="footer__sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      </div>
+      <div class="footer__links">
+        <a href="#products">Products</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#story">Our Story</a>
+        <a href="#faq">FAQ</a>
+        <div class="footer__social" aria-label="Social links">
+          <a href="https://instagram.com/trulaxremedies" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://tiktok.com/@trulaxremedies" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://facebook.com/trulaxremedies" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+      <div class="footer__fine">© <span id="year"></span> TRULAX Remedies. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <dialog class="modal" id="gallery" aria-label="Product gallery" data-gallery>
+    <div class="modal__inner">
+      <button class="modal__close" type="button" aria-label="Close" data-gallery-close>×</button>
+      <div class="modal__head">
+        <div class="modal__title" data-gallery-title>Gallery</div>
+        <div class="modal__sub">Lorem ipsum dolor sit amet</div>
+      </div>
+      <div class="modal__main">
+        <button class="modal__nav modal__nav--prev" type="button" aria-label="Previous image" data-gallery-prev>‹</button>
+        <img class="modal__img" data-gallery-img alt="Gallery image" />
+        <button class="modal__nav modal__nav--next" type="button" aria-label="Next image" data-gallery-next>›</button>
+      </div>
+      <div class="modal__thumbs" data-gallery-thumbs aria-label="Gallery thumbnails"></div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
 </body>
 </html>
