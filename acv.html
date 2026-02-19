@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trulax Remedies</title>
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+.product-page{padding:180px 0 100px 0}
+.product-hero{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.product-image{background:#86efac;border-radius:20px;height:500px;display:flex;align-items:center;justify-content:center}
+.product-details h1{font-size:2.5rem;margin-bottom:20px}
+.price{font-size:2rem;color:#22C55E;font-weight:700;margin:20px 0}
+.quantity{display:flex;gap:15px;align-items:center;margin:20px 0}
+.quantity input{width:80px;padding:10px;border:1px solid #ddd;border-radius:8px}
+.buy-btn{padding:16px 40px;font-size:1.1rem}
+</style>
+</head>
+<body>
+<header class="header">
+<div class="container">
+<nav class="nav">
+<a href="index.html" class="logo">
+<div class="logo-icon"><img src="images/logo.png" alt="Logo"></div>
+</a>
+<ul class="nav-menu">
+<li><a href="index.html#products" class="nav-link">Products</a></li>
+<li><a href="index.html#contact" class="nav-link">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<section class="product-page">
+<div class="container">
+<div class="product-hero">
+<div class="product-image">
+    <img src="images/acv.png" alt="ACV Product Image">
+</div>
+<div class="product-details">
+<h1>Apple Cider Vinegar</h1>
+<p>Premium quality ACV - Moringa, Pomegranate and Vit B6 & B12 Extracts</p>
+<div class="price">£9</div>
+<ul>
+<li>✓ 100% Organic</li>
+<li>✓ Contains The Mother</li>
+<li>✓ Mix Berries Flavour</li>
+<li>✓ 20 Tablets</li>
+</ul>
+<div class="quantity">
+<label>Quantity:</label>
+<input type="number" value="1" min="1" id="qty" disabled>
+<span style="color:#94A3B8;font-size:0.9rem">(Unavailable at the moment)</span>
+</div>
+<button class="btn btn-primary buy-btn" onclick="addToCart()" disabled>Add to Cart</button>
+</div>
+</div>
+</div>
+</section>
+<script>
+function addToCart(){alert('Product added to cart! (Cart functionality coming soon)')}
+</script>
+</body>
+</html>

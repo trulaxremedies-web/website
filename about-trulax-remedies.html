@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Trulax Remedies - Our story, mission, and commitment to natural wellness through science-backed products.">
+  <title>About Trulax Remedies - Our Story & Mission</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon Placeholders -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .about-page { padding: 180px 0 100px 0; background: var(--off-white); }
+    .about-hero { text-align: center; margin-bottom: 80px; }
+    .about-hero h1 { font-size: 3rem; color: var(--darker); margin-bottom: 20px; }
+    .about-hero p { font-size: 1.25rem; color: var(--dark-gray); max-width: 700px; margin: 0 auto; }
+
+    .story-section {
+      background: var(--white);
+      padding: 80px 0;
+      margin-bottom: 0;
+    }
+    .story-section:nth-child(even) { background: var(--off-white); }
+
+    .story-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .story-section:nth-child(even) .story-content { grid-template-columns: 1fr 1fr; }
+    .story-section:nth-child(odd) .story-content { grid-template-columns: 1fr 1fr; }
+    .story-section:nth-child(even) .story-text { order: 2; }
+    .story-section:nth-child(even) .story-image { order: 1; }
+
+    .story-image {
+      background: linear-gradient(135deg, var(--primary-green), var(--secondary-blue));
+      border-radius: 20px;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-lg);
+    }
+    .story-image svg { width: 120px; height: 120px; fill: var(--white); opacity: 0.9; }
+
+    .story-text h2 {
+      font-size: 2rem;
+      color: var(--darker);
+      margin-bottom: 20px;
+    }
+    .story-text p {
+      color: var(--dark-gray);
+      line-height: 1.8;
+      font-size: 1.05rem;
+      white-space: pre-line;
+    }
+
+    @media (max-width: 768px) {
+      .story-content { grid-template-columns: 1fr; }
+      .story-section:nth-child(even) .story-text,
+      .story-section:nth-child(even) .story-image { order: initial; }
+      .about-hero h1 { font-size: 2rem; }
+      .story-image { height: 300px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header" role="banner">
+  <div class="container">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" class="logo" aria-label="Trulax Remedies - Home">
+        <div class="logo-icon">
+          <img src="images/logo.png" alt="Trulax Remedies Logo">
+        </div>
+        <span class="logo-text">Trulax <span>Remedies</span></span>
+      </a>
+
+      <ul class="nav-menu" role="menubar">
+        <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+        <li role="none"><a href="index.html#about" class="nav-link" role="menuitem">About</a></li>
+        <li role="none"><a href="index.html#benefits" class="nav-link" role="menuitem">Benefits</a></li>
+        <li role="none"><a href="index.html#products" class="nav-link" role="menuitem">Products</a></li>
+        <li role="none"><a href="index.html#contact" class="nav-link" role="menuitem">Contact</a></li>
+      </ul>
+
+      <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- About Page Content -->
+<section class="about-page">
+  <div class="about-hero">
+    <h1>About Trulax Remedies</h1>
+    <p>A journey from knowledge to purpose, where science meets nature to create wellness products you can trust.</p>
+  </div>
+</section>
+
+<!-- Our Story Section -->
+<section class="story-section">
+  <div class="story-content">
+    <div class="story-image">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+      </svg>
+    </div>
+    <div class="story-text">
+      <h2>🌿 Our Story: From Knowledge to Purpose</h2>
+      <p>Every great revolution begins with a simple question:
+
+"How can we make people healthier—naturally, safely, and honestly?"
+
+For us, that question became a mission.
+
+Founded by two passionate women with deep roots in pharmaceutical science and herbal medicine, our journey began long before our first product was created. Years of studying active ingredients, plant compounds, clinical research, and traditional remedies gave us a rare understanding: true wellness lies in the balance between modern science and nature's wisdom.
+
+We saw an industry crowded with shortcuts—low-quality ingredients, misleading labels, and products designed for profit instead of people. We knew it could be better.
+
+So, we decided to build something different.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Science Meets Nature Section -->
+<section class="story-section">
+  <div class="story-content">
+    <div class="story-image">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 22c4.97 0 9-4.03 9-9-4.97 0-9 4.03-9 9zM5.6 10.25c0 1.38 1.12 2.5 2.5 2.5.53 0 1.01-.16 1.42-.44l-.02.19c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5l-.02-.19c.4.28.89.44 1.42.44 1.38 0 2.5-1.12 2.5-2.5 0-1-.59-1.85-1.43-2.25.84-.4 1.43-1.25 1.43-2.25 0-1.38-1.12-2.5-2.5-2.5-.53 0-1.01.16-1.42.44l.02-.19C14.5 2.12 13.38 1 12 1S9.5 2.12 9.5 3.5l.02.19c-.4-.28-.89-.44-1.42-.44-1.38 0-2.5 1.12-2.5 2.5 0 1 .59 1.85 1.43 2.25-.84.4-1.43 1.25-1.43 2.25zM12 5.5c1.38 0 2.5 1.12 2.5 2.5s-1.12 2.5-2.5 2.5S9.5 9.38 9.5 8s1.12-2.5 2.5-2.5zM3 13c0 4.97 4.03 9 9 9 0-4.97-4.03-9-9-9z"/>
+      </svg>
+    </div>
+    <div class="story-text">
+      <h2>💡 Where Science Meets Nature</h2>
+      <p>With strong backgrounds in pharmaceutical formulation and herbal research, we combined two powerful worlds:
+
+• The precision of science
+• The healing power of nature
+
+Every formula we create is backed by research, tested for purity, and crafted with intention. We don't believe in trends. We believe in trust.
+
+From Apple Cider Vinegar and Multivitamins to Liver Detox and Ashwagandha, each product is carefully designed to support real, everyday health—energy, immunity, digestion, focus, and balance.
+
+No fillers.
+No compromises.
+No empty promises.
+
+Only premium ingredients that your body truly deserves.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Built With Heart Section -->
+<section class="story-section">
+  <div class="story-content">
+    <div class="story-image">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      </svg>
+    </div>
+    <div class="story-text">
+      <h2>🌱 Built With Heart, Not Hype</h2>
+      <p>We didn't start this company to sell supplements.
+
+We started it to change lives.
+
+As women, as scientists, and as caregivers at heart, we understand how overwhelming health choices can be. We've been there—reading labels, questioning claims, searching for products we could truly trust.
+
+So, we became the brand we were looking for.
+
+A brand that listens.
+A brand that educates.
+A brand that puts people first.</p>
+    </div>
+  </div>
+</section>
+
+<!-- New Era Section -->
+<section class="story-section">
+  <div class="story-content">
+    <div class="story-image">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z"/>
+      </svg>
+    </div>
+    <div class="story-text">
+      <h2>🚀 A New Era of Wellness</h2>
+      <p>Our vision is bold:
+
+To revolutionize the health industry by setting new standards for quality, transparency, and integrity.
+
+We believe that wellness should not be a luxury. It should be accessible, honest, and empowering.
+
+Every bottle we produce carries our promise:
+
+✨ To support your journey
+✨ To respect your body
+✨ To honor your trust</p>
+    </div>
+  </div>
+</section>
+
+<!-- Movement Section -->
+<section class="story-section">
+  <div class="story-content">
+    <div class="story-image">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M11.5 9C11.5 10.93 13.07 12.5 15 12.5s3.5-1.57 3.5-3.5S16.93 5.5 15 5.5 11.5 7.07 11.5 9zM15 7.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM4.5 9C4.5 10.93 6.07 12.5 8 12.5s3.5-1.57 3.5-3.5S9.93 5.5 8 5.5 4.5 7.07 4.5 9zM8 7.5c.83 0 1.5.67 1.5 1.5S8.83 10.5 8 10.5 6.5 9.83 6.5 9 7.17 7.5 8 7.5zM15.5 13.5c-2.33 0-7 1.17-7 3.5V19h14v-2c0-2.33-4.67-3.5-7-3.5zm-9 0c-.29 0-.62.02-.97.05.02.01.03.03.05.04 1.35.91 2.42 2.13 2.42 3.41v2h-7v-2c0-2.33 4.67-3.5 7-3.5h.5z"/>
+      </svg>
+    </div>
+    <div class="story-text">
+      <h2>❤️ More Than Supplements. A Movement.</h2>
+      <p>Today, we are more than a company.
+
+We are a community of people who believe in:
+
+• Living consciously
+• Choosing better
+• Growing stronger—inside and out
+
+We are proud to stand at the intersection of science, nature, and purpose.
+
+And this is only the beginning.
+
+Together, we are building a healthier future—one premium product at a time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="Trulax Remedies - Home">
+          <div class="logo-icon">
+            <img src="images/logo.png" alt="Trulax Remedies Logo">
+          </div>
+          <span class="logo-text">Trulax <span>Remedies</span></span>
+        </a>
+        <p>Empowering you to live a healthier, more balanced life through natural wellness solutions.</p>
+        <div class="contact-social">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links-section">
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-trulax-remedies.html">About Us</a></li>
+          <li><a href="index.html#benefits">Benefits</a></li>
+          <li><a href="index.html#products">Products</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-section">
+        <h4 class="footer-title">Products</h4>
+        <ul class="footer-links">
+          <li><a href="acv.html">Apple Cider Vinegar</a></li>
+          <li><a href="index.html#products">Herbal Supplements</a></li>
+          <li><a href="index.html#products">Natural Remedies</a></li>
+          <li><a href="index.html#products">Wellness Products</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-section">
+        <h4 class="footer-title">Support</h4>
+        <ul class="footer-links">
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Trulax Remedies. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+
+</body>
+</html>
