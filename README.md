@@ -1,7 +1,6 @@
 # TRULAX Remedies — GitHub Pages site
 
 This is a simple static site (HTML/CSS/JS) designed to be hosted on **GitHub Pages**.
-
 ## Local preview
 
 From the repo root:

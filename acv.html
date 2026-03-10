@@ -6,14 +6,60 @@
 <title>Trulax Remedies</title>
 <link rel="stylesheet" href="assets/styles.css">
 <style>
-.product-page{padding:180px 0 100px 0}
+.product-page{padding:140px 0 60px 0}
 .product-hero{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
-.product-image{background:#86efac;border-radius:20px;height:500px;display:flex;align-items:center;justify-content:center}
-.product-details h1{font-size:2.5rem;margin-bottom:20px}
-.price{font-size:2rem;color:#22C55E;font-weight:700;margin:20px 0}
+.product-gallery{display:flex;flex-direction:column;gap:15px;max-width:500px;width:100%}
+.main-image{background:#fff;border-radius:20px;width:100%;max-width:500px;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid #E8F5E9}
+.main-image img{max-width:100%;max-height:100%;object-fit:contain}
+.thumbnail-wrapper{display:flex;align-items:center;gap:10px;width:100%;max-width:500px}
+.thumb-nav{width:36px;height:36px;border-radius:50%;border:1px solid #ddd;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.3s ease}
+.thumb-nav:hover{background:#E8F5E9;border-color:#2E7D32}
+.thumb-nav:disabled{opacity:0.3;cursor:not-allowed}
+.thumb-nav svg{width:16px;height:16px;fill:#2E7D32}
+.thumbnail-container{flex:1;overflow:hidden}
+.thumbnail-row{display:flex;gap:10px;transition:transform 0.3s ease}
+.thumbnail{width:80px;height:80px;border-radius:10px;overflow:hidden;cursor:pointer;border:2px solid transparent;transition:all 0.3s ease;background:#F5F5F0;flex-shrink:0}
+.thumbnail:hover,.thumbnail.active{border-color:#2E7D32;box-shadow:0 2px 8px rgba(46,125,50,0.3)}
+.thumbnail img{width:100%;height:100%;object-fit:cover}
+.product-details h1{font-size:2.5rem;margin-bottom:20px;color:#2C1810}
+.product-details p{color:#5D4037;font-size:1.1rem}
+.product-details ul{list-style:none;padding:0;margin:20px 0}
+.product-details ul li{padding:8px 0;color:#3E2723;font-size:1rem}
+.price{font-size:2rem;color:#2E7D32;font-weight:700;margin:20px 0}
 .quantity{display:flex;gap:15px;align-items:center;margin:20px 0}
 .quantity input{width:80px;padding:10px;border:1px solid #ddd;border-radius:8px}
-.buy-btn{padding:16px 40px;font-size:1.1rem}
+.buy-btn{padding:16px 40px;font-size:1.1rem;display:inline-block;text-align:center}
+
+@media(max-width:1024px){
+  .product-hero{grid-template-columns:1fr 1fr;gap:40px}
+  .product-gallery{max-width:100%}
+  .main-image{max-width:100%}
+  .thumbnail-wrapper{max-width:100%}
+  .product-details h1{font-size:2rem}
+}
+
+@media(max-width:768px){
+  .product-page{padding:120px 0 40px 0}
+  .product-hero{grid-template-columns:1fr;gap:30px}
+  .product-gallery{max-width:100%;margin:0 auto}
+  .main-image{max-width:100%;height:auto;min-height:300px}
+  .thumbnail-wrapper{max-width:100%}
+  .thumbnail{width:60px;height:60px}
+  .product-details{text-align:center}
+  .product-details h1{font-size:1.75rem}
+  .product-details ul{text-align:left;max-width:280px;margin:20px auto}
+  .buy-btn{width:100%;padding:14px 30px}
+}
+
+@media(max-width:480px){
+  .product-page{padding:100px 0 30px 0}
+  .main-image{min-height:250px}
+  .thumbnail{width:50px;height:50px}
+  .thumb-nav{width:30px;height:30px}
+  .thumb-nav svg{width:14px;height:14px}
+  .product-details h1{font-size:1.5rem}
+  .price{font-size:1.75rem}
+}
 </style>
 </head>
 <body>
@@ -33,8 +79,55 @@
 <section class="product-page">
 <div class="container">
 <div class="product-hero">
-<div class="product-image">
-    <img src="images/acv.png" alt="ACV Product Image">
+<div class="product-gallery">
+    <div class="main-image">
+        <img src="images/acv.png" alt="ACV Product Image" id="mainImg">
+    </div>
+    <div class="thumbnail-wrapper">
+        <button class="thumb-nav" id="prevBtn" onclick="scrollThumbs(-1)">
+            <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+        </button>
+        <div class="thumbnail-container">
+            <div class="thumbnail-row" id="thumbRow">
+                <div class="thumbnail active" onclick="changeImage('images/acv.png', this)">
+                    <img src="images/acv.png" alt="ACV Main">
+                </div>
+                <div class="thumbnail" onclick="changeImage('images/E-COMMERCE 1.jpg', this)">
+                    <img src="images/E-COMMERCE 1.jpg" alt="ACV View 2">
+                </div>
+                <div class="thumbnail" onclick="changeImage('images/E-COMMERCE 2.jpg', this)">
+                    <img src="images/E-COMMERCE 2.jpg" alt="ACV View 3">
+                </div>
+                <div class="thumbnail" onclick="changeImage('images/E-COMMERCE 3.PNG', this)">
+                    <img src="images/E-COMMERCE 3.PNG" alt="ACV View 4">
+                </div>
+                <div class="thumbnail" onclick="changeImage('images/E-COMMERCE 4.PNG', this)">
+                    <img src="images/E-COMMERCE 4.PNG" alt="ACV View 5">
+                </div>
+                <div class="thumbnail" onclick="changeImage('images/E-COMMERCE 5.PNG', this)">
+                    <img src="images/E-COMMERCE 5.PNG" alt="ACV View 6">
+                </div>
+                <div class="thumbnail" onclick="changeImage('images/E-COMMERCE 6.png', this)">
+                    <img src="images/E-COMMERCE 6.png" alt="ACV View 7">
+                </div>
+                <div class="thumbnail" onclick="changeImage('images/E-COMMERCE 7.png', this)">
+                    <img src="images/E-COMMERCE 7.png" alt="ACV View 8">
+                </div>
+                <div class="thumbnail" onclick="changeImage('images/E-COMMERCE 8.png', this)">
+                    <img src="images/E-COMMERCE 8.png" alt="ACV View 9">
+                </div>
+                <div class="thumbnail" onclick="changeImage('images/E-COMMERCE 9.png', this)">
+                    <img src="images/E-COMMERCE 9.png" alt="ACV View 10">
+                </div>
+                <div class="thumbnail" onclick="changeImage('images/E-COMMERCE 10.png', this)">
+                    <img src="images/E-COMMERCE 10.png" alt="ACV View 11">
+                </div>
+            </div>
+        </div>
+        <button class="thumb-nav" id="nextBtn" onclick="scrollThumbs(1)">
+            <svg viewBox="0 0 24 24"><path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/></svg>
+        </button>
+    </div>
 </div>
 <div class="product-details">
 <h1>Apple Cider Vinegar</h1>
@@ -46,18 +139,69 @@
 <li>✓ Mix Berries Flavour</li>
 <li>✓ 20 Tablets</li>
 </ul>
-<div class="quantity">
-<label>Quantity:</label>
-<input type="number" value="1" min="1" id="qty" disabled>
-<span style="color:#94A3B8;font-size:0.9rem">(Unavailable at the moment)</span>
-</div>
-<button class="btn btn-primary buy-btn" onclick="addToCart()" disabled>Add to Cart</button>
+<!--<div class="quantity">-->
+<!--<label>Quantity:</label>-->
+<!--&lt;!&ndash;<input type="number" value="1" min="1" id="qty">&ndash;&gt;-->
+<!--&lt;!&ndash;<span style="color:#94A3B8;font-size:0.9rem">(Unavailable at the moment)</span>&ndash;&gt;-->
+<!--</div>-->
+<a href="https://www.ebay.co.uk/itm/306718181876" target="_blank" class="btn btn-primary buy-btn">Buy on eBay</a>
 </div>
 </div>
 </div>
 </section>
 <script>
-function addToCart(){alert('Product added to cart! (Cart functionality coming soon)')}
+let thumbOffset = 0;
+
+function getThumbSettings() {
+    const width = window.innerWidth;
+    if (width <= 480) {
+        return { thumbWidth: 60, visibleThumbs: 3 };
+    } else if (width <= 768) {
+        return { thumbWidth: 70, visibleThumbs: 4 };
+    } else {
+        return { thumbWidth: 90, visibleThumbs: 4 };
+    }
+}
+
+function changeImage(src, el) {
+    document.getElementById('mainImg').src = src;
+    document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+}
+
+function scrollThumbs(dir) {
+    const row = document.getElementById('thumbRow');
+    const totalThumbs = row.children.length;
+    const settings = getThumbSettings();
+    const maxOffset = Math.max(0, totalThumbs - settings.visibleThumbs);
+    
+    thumbOffset += dir;
+    thumbOffset = Math.max(0, Math.min(thumbOffset, maxOffset));
+    
+    row.style.transform = `translateX(-${thumbOffset * settings.thumbWidth}px)`;
+    updateNavButtons(totalThumbs);
+}
+
+function updateNavButtons(total) {
+    const settings = getThumbSettings();
+    document.getElementById('prevBtn').disabled = thumbOffset === 0;
+    document.getElementById('nextBtn').disabled = thumbOffset >= total - settings.visibleThumbs;
+}
+
+function handleResize() {
+    thumbOffset = 0;
+    const row = document.getElementById('thumbRow');
+    row.style.transform = 'translateX(0)';
+    const total = row.children.length;
+    updateNavButtons(total);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const total = document.getElementById('thumbRow').children.length;
+    updateNavButtons(total);
+});
+
+window.addEventListener('resize', handleResize);
 </script>
 </body>
 </html>
