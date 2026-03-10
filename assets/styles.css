@@ -267,13 +267,18 @@ img {
   padding-top: 80px;
 }
 
-.hero-bg {
+.hero-bg{
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/wellness.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   z-index: 0;
+  opacity: 0.8;
 }
 
 .hero-bg::before {
@@ -305,7 +310,7 @@ img {
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 60px;
   align-items: center;
   position: relative;
@@ -490,6 +495,13 @@ img {
   align-items: center;
   justify-content: center;
   box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.about-image-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about-image-main svg {
